@@ -1,36 +1,20 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import $ from 'jquery';
-/*import Popper from 'popper.js';*/
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import './App.css';
-import Navbar from './navbar';
-import Carrousel from './carrousel';
-import Form from './form';
-import Accordion from './accordion';
+import Section1 from "./Components/Section1/Section1";
+import Section2 from "./Components/Section2/Section2";
+import Section3 from "./Components/Section3/Section3";
+import Section4 from "./Components/Section4/Section4";
+
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-     <Navbar/>
-
-     <Carrousel/>
-     <Accordion/>
-     
-     <Form/>
-     {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"xit
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-  </header>*/}
+    <div className='container-fluid'>
+     <Section1 />
+     <Section2 />
+     <Section3 />
+     <Section4 />
     </div>
   );
 }
