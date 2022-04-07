@@ -2,6 +2,13 @@ import React from 'react'
 import NavBar from '../NavBar/NavBar'
 import Button from '../Elements/Button'
 
+const siguiente = () => {
+
+}
+
+setInterval(() => {
+    siguiente();
+}, 4000);
 function Section1(props){
     return (
         <div className='principal container-fluid'>
