@@ -34,8 +34,8 @@ function Section1(props){
 
                 </div>
                 <div className="carousel-item">
-                    <img src="./images/bicicleta.png" className="d-none d-md-block w-100" alt="Casilla rodante con Bicicleta y montañas" />
-                    <img src="./images/bicicleta-mobile.png" className="d-block w-100 d-md-none" alt="Casilla rodante con Bicicleta y montañas" />
+                    <img src="./images/contact.png" className="d-none d-md-block w-100" alt="Globos en el aire" />
+                    <img src="./images/contact.png" className="d-block w-100 d-md-none" alt="Gobos en el aire" />
                     
                     <div className="carousel-caption">
                         <h5 className='titulo_carousel'>Sed ut perspiciatis unde omnis iste natus</h5>
@@ -46,8 +46,8 @@ function Section1(props){
                     </div>
                 </div>
                 <div className="carousel-item">
-                    <img src="./images/bicicleta.png" className="d-none d-md-block w-100" alt="Casilla rodante con Bicicleta y montañas" />
-                    <img src="./images/bicicleta-mobile.png" className="d-block w-100 d-md-none" alt="Casilla rodante con Bicicleta y montañas" />
+                    <img src="./images/casa-lago.png" className="d-none d-md-block w-100" alt="Casa lago" />
+                    <img src="./images/casa-lago.png" className="d-block w-100 d-md-none" alt="Casa lago" />
                     
                     <div className="carousel-caption ">
                         <h5 className='titulo_carousel'>Sed ut perspiciatis unde omnis iste natus</h5>
