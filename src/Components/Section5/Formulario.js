@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Formik } from 'formik';
+import { Axios } from 'axios';
 
+const axios = require('axios');
 
 const Formulario = () => {
      const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
-
+     
      return (
           <>
                <Formik
@@ -41,13 +43,21 @@ const Formulario = () => {
                     }}
                     
                     onSubmit={(valores, {resetForm}) => {
+                         const [data, setData] = useState({"name":"", "email":"", "phone":"", "message":""});
                          resetForm();
                          cambiarFormularioEnviado(false);
                          setTimeout(() => {
                               cambiarFormularioEnviado(true);
                          }, 2000)
                          //Aqui va llamada a la API
-
+                         axios.post(
+                              //aqui hay que poner la direccion de herokuapp que tengamos
+                              "https://***.herokuapp.com/api/post",data
+                          ).then(res=>{
+                              setType(res.data.status);
+                              setData ({"name":"", "email":"", "phone":"", "message":""});
+                              
+                          });
                          
                     }}
                >
