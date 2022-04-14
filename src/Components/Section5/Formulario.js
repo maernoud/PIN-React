@@ -41,25 +41,19 @@ const Formulario = () => {
 
                          return errores;
                     }}
-                    
                     onSubmit={(valores, {resetForm}) => {
-                         const [data, setData] = useState({"name":"", "email":"", "phone":"", "message":""});
                          resetForm();
                          cambiarFormularioEnviado(false);
                          setTimeout(() => {
                               cambiarFormularioEnviado(true);
                          }, 2000)
-                         //Aqui va llamada a la API
-                         axios.post(
-                              //aqui hay que poner la direccion de herokuapp que tengamos
-                              "https://***.herokuapp.com/api/post",data
-                          ).then(res=>{
-                              setType(res.data.status);
-                              setData ({"name":"", "email":"", "phone":"", "message":""});
-                              
-                          });
+                         axios.post('https://***.herokuapp.com/api/post',valores)
+                         
+
                          
                     }}
+          
+
                >
                     {({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
                          <form onSubmit={handleSubmit} id="formulario" className="formulario_globo__content__form">
