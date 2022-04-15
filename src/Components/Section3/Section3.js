@@ -16,12 +16,12 @@ const Section3 = () => {
                             <div className="carousel-item">
                                 <p className="segundo_carousel_texto1">Sed ut perspiciatis.</p>
                                 <h3 className="segundo_carousel_titulo">Nemo Enim</h3>
-                                <p className="segundo_carousel_texto2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+                                <p className="segundo_carousel_texto2">Sed ut perspiciatis unde omnis iste natus.</p>
                             </div>
                             <div className="carousel-item">
                                 <p className="segundo_carousel_texto1">Sed ut perspiciatis.</p>
                                 <h3 className="segundo_carousel_titulo">Nemo Enim</h3>
-                                <p className="segundo_carousel_texto2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+                                <p className="segundo_carousel_texto2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
                             </div>
                         </div>
                         <div className="section3_botones">

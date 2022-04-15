@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Formik } from 'formik';
-import { Axios } from 'axios';
-
-const axios = require('axios');
+import axios from 'axios';
 
 const Formulario = () => {
      const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
-     
+
      return (
           <>
                <Formik
@@ -14,33 +12,34 @@ const Formulario = () => {
                          name: '',
                          email: '',
                          phone: '',
-                         message: '',
+                         message: ''
                     }}
                     validate={(valores) => {
                          let errores = {};
                          // Validamos el nombre
                          if (!valores.name) {
-                              errores.name = 'Ingrese su nombre'
+                              errores.name = 'por favor ingrese su nombre'
                          } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.name)) {
-                              errores.name = 'Tu nombre solo puede contener letras y espacios'
+                              errores.name = 'Su nombre solo puede contener letras y espacios'
                          }
                          // Validamos el email
                          if (!valores.email) {
-                              errores.email = 'Ingrese su email'
+                              errores.email = 'Por favor ingrese su email'
                          } else if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.email)) {
                               errores.email = 'Su correo electrónico solo puede contener letras, números, guiones, puntos y espacios'
                          }
                          // Validamos el telefono
                          if (!valores.phone) {
-                              errores.phone = 'Ingrese su telefono'
+                              errores.phone = 'Por favor ingrese su telefono'
                          }
                          // Validamos el mensaje
                          if (!valores.message) {
-                              errores.message = 'Escriba su mensaje'
+                              errores.message = 'por favor ingrese su mensaje'
                          }
 
                          return errores;
                     }}
+                    
                     onSubmit={(valores, {resetForm}) => {
                          resetForm();
                          cambiarFormularioEnviado(false);
@@ -52,8 +51,6 @@ const Formulario = () => {
 
                          
                     }}
-          
-
                >
                     {({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
                          <form onSubmit={handleSubmit} id="formulario" className="formulario_globo__content__form">
@@ -116,7 +113,7 @@ const Formulario = () => {
                               </div>
                               <div className="formulario_globo__content__boton">
                                    <button type="submit" className="button_send"> SEND </button>
-                                   {formularioEnviado && <div className='exito_div'><p className='exito'>Formulario enviado con exito</p></div>}
+                                   {formularioEnviado && <div className='exito_div'><p className='exito'>mensaje enviado con exito</p></div>}
                               </div>
                          </form>
                     )}
