@@ -48,7 +48,10 @@ const Formulario = () => {
                          setTimeout(() => {
                               cambiarFormularioEnviado(true);
                          }, 2000)
-                         axios.post('https://***.herokuapp.com/api/post',valores)
+                         //direcciones backend, local y heroku:
+                         
+                         axios.post('http://127.0.0.1:8000/api/post', valores)
+                          //axios.post('https://backendpin.herokuapp.com:5432/api/post',valores)
                          
 
                          
