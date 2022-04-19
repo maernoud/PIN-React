@@ -50,8 +50,8 @@ const Formulario = () => {
                          }, 2000)
                          //direcciones backend, local y heroku:
                          
-                         axios.post('http://127.0.0.1:8000/api/post', valores)
-                          //axios.post('https://backendpin.herokuapp.com:5432/api/post',valores)
+                         //axios.post('http://127.0.0.1:8000/api/post', valores)
+                         axios.post('https://backendpin.herokuapp.com:5432/api/post',valores)
                          
 
                          
