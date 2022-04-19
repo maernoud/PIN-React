@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
 import { Formik } from 'formik';
 import axios from 'axios';
+import emailjs from '@emailjs/browser';
 
+
+function enviarEmail(e){
+     e.preventDefault();
+
+     emailjs.sendForm('service_f9pm6a2','template_5ztjsi8',e.target,'6hZYsmskYO-gTzqD5')
+     .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 const Formulario = () => {
      const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
+
 
      return (
           <>
@@ -52,8 +65,8 @@ const Formulario = () => {
                          
                     }}
                >
-                    {({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
-                         <form onSubmit={handleSubmit} id="formulario" className="formulario_globo__content__form">
+                    {({ values, errors, touched, handleChange, handleBlur }) => (
+                         <form onSubmit={enviarEmail} id="formulario" className="formulario_globo__content__form">
                               <div className="formulario_globo__content__form__name">
                                    <label htmlFor="name">Name</label>
                                    <input

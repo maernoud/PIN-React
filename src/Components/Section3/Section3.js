@@ -30,6 +30,7 @@ const Section3 = () => {
                             </button>
                             <button className="carousel-control-next section3_botones2" type="button" data-bs-target="#segundo_carousel"
                                 data-bs-slide="next"><img src='../images/button/right.svg'></img>
+                        
                             </button>
                         </div>
                     </div>
